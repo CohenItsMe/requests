@@ -16,11 +16,6 @@ pipeline {
                 sh 'pytest TestRest.py'
             }
         }
-        stage('deploy') {
-            steps {
-                echo "deploying.."
-            }
-        }
     }
     post{
         success{
