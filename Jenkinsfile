@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('clone') {
-            steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/CohenItsMe/requests']]])
+        stage('clone'){
+            steps{
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https:github.com/CohenItsMe/requests']]])
             }
         }
         stage('build') {
@@ -19,7 +19,7 @@ pipeline {
     }
     post{
         success{
-            sh 'docker build -t NewTest .'
+           sh 'docker build -t NewTest .'
         }
     }
 }
