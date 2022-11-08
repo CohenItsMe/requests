@@ -8,7 +8,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                echo "build.."
+                sh 'python http_e.py'
             }
         }
         stage('test') {
