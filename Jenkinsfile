@@ -22,4 +22,9 @@ pipeline {
             }
         }
     }
+    post{
+        success{
+            sh 'docker build -t NewTest .'
+        }
+    }
 }
