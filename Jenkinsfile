@@ -19,7 +19,7 @@ pipeline {
     }
     post{
         success{
-           sh 'docker build -t NewTest .'
+           sh 'docker build -t testor .'
         }
     }
 }
